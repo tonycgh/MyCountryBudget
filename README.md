@@ -65,6 +65,10 @@ This repository is the public home for methodology, source data definitions, pro
 
 The production web application, operational configuration and deployment tooling live in a separate private repository.
 
+## Roadmap
+
+See the [ordered roadmap](docs/ROADMAP.md) for delivered functionality, next steps and the requirements for moving beyond the prototype.
+
 ## Status
 
 Early prototype. Data and model outputs must not be treated as official forecasts unless explicitly identified as such.

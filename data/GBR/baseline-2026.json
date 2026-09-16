@@ -1,0 +1,43 @@
+{
+  "country_code": "GBR",
+  "country_name": "United Kingdom",
+  "baseline_id": "GBR-2026-08-21",
+  "status": "provisional",
+  "values": {
+    "annual_public_sector_net_borrowing": {
+      "value": 129.8,
+      "unit": "GBP_billion",
+      "period": "FYE_2026-03",
+      "classification": "observed",
+      "notes": "Public sector net borrowing excluding public sector banks; provisional and subject to revision."
+    },
+    "annual_public_sector_net_borrowing_pct_gdp": {
+      "value": 4.2,
+      "unit": "percent_GDP",
+      "period": "FYE_2026-03",
+      "classification": "observed"
+    },
+    "public_sector_net_debt": {
+      "value": 2984.9,
+      "unit": "GBP_billion",
+      "period": "2026-07-31",
+      "classification": "observed",
+      "notes": "Public sector net debt excluding public sector banks; provisional."
+    },
+    "public_sector_net_debt_pct_gdp": {
+      "value": 94.1,
+      "unit": "percent_GDP",
+      "period": "2026-07-31",
+      "classification": "observed"
+    }
+  },
+  "sources": [
+    {
+      "publisher": "Office for National Statistics",
+      "title": "Public sector finances, UK",
+      "url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/latest",
+      "retrieved": "2026-09-16",
+      "notes": "Latest ONS bulletin available when this baseline record was created."
+    }
+  ]
+}

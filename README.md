@@ -19,6 +19,29 @@ The project is intentionally neutral about which political choices are preferabl
 9. **AI is a participant, not the judge.** Human and AI proposals use the same deterministic calculation engine.
 10. **No single political 'winner' score.** Fiscal and service outcomes are shown as separate dimensions; user preferences are not collapsed into a normative ranking.
 
+## Measurement rules
+
+A core rule is to keep fiscal **flows**, **stocks**, and internationally standardized comparison measures visibly separate:
+
+- **Annual deficit/surplus per person** is one year's fiscal balance divided by population.
+- **Debt per person** is the outstanding public-debt stock divided by population.
+- **International comparison debt per person** uses a standardized general-government definition and PPP-adjusted international dollars where available so country rows can be compared more consistently.
+- **Country simulator baselines** use an explicit official national definition and are versioned. The initial UK prototype uses an ONS public-sector baseline.
+
+These measures are not interchangeable. The interface should identify which one is being shown rather than using a generic label such as “balance per person.”
+
+## Data provenance
+
+Published figures should expose, where applicable:
+
+- source and source URL
+- source/effective date
+- unit and accounting definition
+- observed, derived or modelled classification
+- data/model version
+
+If a comparison field has not yet been normalized across countries, it should remain blank rather than show a superficially comparable but misleading number.
+
 ## Initial scope
 
 The first playable country is the United Kingdom. Initial controls are expected to cover approximately ten major levers, including:
@@ -34,7 +57,7 @@ The first playable country is the United Kingdom. Initial controls are expected 
 - state pension / retirement age
 - other major spending / investment
 
-The interface will continuously show the change from the real starting deficit/surplus and other resulting fiscal indicators.
+The interface continuously shows the change from the real starting deficit/surplus and other resulting fiscal indicators. The landing page is also intended to provide a one-row-per-country comparison using roughly 10–15 important statistics, with debt per person and VAT/GST/sales-tax differences especially visible.
 
 ## Public and private repositories
 

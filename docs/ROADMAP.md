@@ -36,6 +36,14 @@ Priorities describe delivery order, not promised dates. Reliability checks conti
 
 Keep one Canada row in the country comparison. When Canada becomes playable, add a province/territory choice and clearly distinguish federal and provincial responsibilities and tax effects. Do not expand the current UK build into provincial simulation work.
 
+## Operations implementation — 16 September 2026
+
+The first operations milestone now has merged implementation: deployment of a tested revision, a separate Python environment per release, verified pre-deploy database backups, guarded application rollback, nightly backups plus an independent operator copy, and phone/desktop browser release checks.
+
+CI passed the complete ten-decision journey, results/copy/revisit/reset, PostgreSQL restoration and corruption rejection, guarded rollback, and fresh-install failure cleanup.
+
+**Activation is still pending the one-time connection of the dedicated deployment runner.** This is tested code readiness, not confirmation that production backup timers, independent copies or automatic deployments are already running. Those checklist items remain open until the connected production workflow succeeds.
+
 ## Remaining release checks
 
 - [ ] Automated deployment independent of the laptop's forwarded SSH agent.

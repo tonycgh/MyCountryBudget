@@ -11,6 +11,7 @@ This is a deployed prototype. Community publishing, voting and forking are imple
 ## What is already delivered
 
 - Public website at https://mycountrybudget.com with HTTPS.
+- Generated [XML sitemap](https://mycountrybudget.com/sitemap.xml), robots.txt discovery and matching canonical URLs for public country builders, reference pages and community information.
 - Eleven playable countries: United Kingdom, Canada, United States, Mexico, Germany, France, India, UAE, Saudi Arabia, Italy and Spain.
 - Ten-decision overview, open in any order, save and revisit.
 - Existing UK pound-based model plus versioned 2025 IMF baselines for new country scenarios, with annual deficit/surplus and per-person results.
@@ -54,6 +55,8 @@ The dedicated MyCountryBudget runner is active on `sr-operator`. Production rele
 Community release `ef1ae931b778deb48be9ee070b88d0e26e7b2049` implements accounts, immutable publication, voting, attributed forks, country feeds and sourced tax/election references. [CI passed](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35236104512) with 70 model, API, database, security and reference tests. [Production verification passed](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35236717474): exact revision, independent backup copy, all eleven countries on mobile and desktop, and real publishing, voting and forking journeys. Temporary accounts were removed and no public seed activity was created. Rollback was not needed.
 
 The follow-up table-wrapping fix is live in `9b1466bb86b22c02d9eb7d772b588c5f54961ac5`. Its [CI](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35236983442) and [complete production verification](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35237644319) also passed, including the community journeys and cleanup.
+
+Search discovery shipped in `bbab5b3d7362e6637a7f5132932a666ef2c15b2e`: 23 public canonical URLs generated from the country catalog, with user proposals/account/API URLs excluded and no artificial modification dates. [CI](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35243990524) passed all 73 tests; [production verification](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35244538281) passed XML coverage, the robots.txt sitemap link, HEAD support and the existing mobile/desktop/community journeys. The public sitemap and robots.txt both returned HTTP 200. Cloudflare settings were not changed.
 
 Real-host disaster recovery remains a continuing rehearsal task; passing isolated CI recovery tests is not proof of every disaster scenario.
 

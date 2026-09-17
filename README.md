@@ -42,6 +42,12 @@ Published figures should expose, where applicable:
 
 If a comparison field has not yet been normalized across countries, it should remain blank rather than show a superficially comparable but misleading number.
 
+## Playable now — 17 September 2026
+
+Eleven countries are live at [mycountrybudget.com](https://mycountrybudget.com): United Kingdom, Canada, United States, Mexico, Germany, France, India, United Arab Emirates, Saudi Arabia, Italy and Spain.
+
+Every country has ten decisions, save/cancel, reset, copyable results and separate drafts within the current browser tab. The UK retains its pound-based prototype. Other countries use explicit revenue/spending targets in percent of GDP, based on 2025 IMF WEO April 2026 estimates; per-person comparisons use international dollars at purchasing power parity. These targets are not tax rates or forecasts of policy effects. Country-specific tax and pension modelling remains a separate next step.
+
 ## Initial scope
 
 The first playable country is the United Kingdom. Initial controls are expected to cover approximately ten major levers, including:

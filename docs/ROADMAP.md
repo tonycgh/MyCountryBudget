@@ -53,6 +53,8 @@ The dedicated MyCountryBudget runner is active on `sr-operator`. Production rele
 
 Community release `ef1ae931b778deb48be9ee070b88d0e26e7b2049` implements accounts, immutable publication, voting, attributed forks, country feeds and sourced tax/election references. [CI passed](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35236104512) with 70 model, API, database, security and reference tests. [Production verification passed](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35236717474): exact revision, independent backup copy, all eleven countries on mobile and desktop, and real publishing, voting and forking journeys. Temporary accounts were removed and no public seed activity was created. Rollback was not needed.
 
+The follow-up table-wrapping fix is live in `9b1466bb86b22c02d9eb7d772b588c5f54961ac5`. Its [CI](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35236983442) and [complete production verification](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35237644319) also passed, including the community journeys and cleanup.
+
 Real-host disaster recovery remains a continuing rehearsal task; passing isolated CI recovery tests is not proof of every disaster scenario.
 
 ## Remaining release checks

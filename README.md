@@ -40,13 +40,19 @@ Published figures should expose, where applicable:
 - observed, derived or modelled classification
 - data/model version
 
-If a comparison field has not yet been normalized across countries, it should remain blank rather than show a superficially comparable but misleading number.
+If a comparison field has not yet been verified or normalized, label it explicitly as missing. A missing field must not imply that the country has no such tax or pension.
 
 ## Playable now — 17 September 2026
 
 Eleven countries are live at [mycountrybudget.com](https://mycountrybudget.com): United Kingdom, Canada, United States, Mexico, Germany, France, India, United Arab Emirates, Saudi Arabia, Italy and Spain.
 
 Every country has ten decisions, save/cancel, reset, copyable results and separate drafts within the current browser tab. The UK retains its pound-based prototype. Other countries use explicit revenue/spending targets in percent of GDP, based on 2025 IMF WEO April 2026 estimates; per-person comparisons use international dollars at purchasing power parity. These targets are not tax rates or forecasts of policy effects. Country-specific tax and pension modelling remains a separate next step.
+
+## Community and references — 17 September 2026
+
+Publish a fixed snapshot of your ten choices, vote on budgets and their justifications, or fork someone else's budget into your own version. The landing page switches between country comparison, community budgets (latest, top-rated and top justifications), and election/budget references. Accounts are needed to publish or vote; browsing, playing and forking are open. Current accounts use a username, password and a one-time recovery code.
+
+Income and corporation tax headlines now have source links and jurisdiction/period notes for all eleven countries. Election references label current government documents, budget requests, opposition proposals and historical manifestos separately. This is a dated selected collection with explicit coverage gaps, not an automatic news feed. Some pension schedules and matched current opposition-budget sets still need source review.
 
 ## Initial scope
 

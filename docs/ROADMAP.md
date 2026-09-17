@@ -6,7 +6,7 @@ Updated: 17 September 2026
 
 Ship a credible, mobile-first multi-country budget simulator that a new visitor can complete in under five minutes. Keep the approved country-comparison layout and the finite **10 decisions. That's it.** overview. No sign-in is needed to play.
 
-This is a deployed prototype. Deployment of the interface does not mean that the fiscal model, AI challenge or community features are finished.
+This is a deployed prototype. Community publishing, voting and forking are implemented. The fiscal sensitivity models and AI challenge remain separate unfinished milestones.
 
 ## What is already delivered
 
@@ -17,6 +17,11 @@ This is a deployed prototype. Deployment of the interface does not mean that the
 - Non-UK controls are explicit revenue/spending targets in % GDP; per-person results use Intl $ PPP. They are not local tax-rate forecasts.
 - Country links and separate per-country drafts survive refresh in the current browser tab.
 - Optional short explanations and copyable budget summary.
+- Accounts with recovery codes; immutable published budgets; attributed forks; up/down votes on budgets and justifications.
+- Landing tabs for comparisons, latest/top budgets by country, top positively rated justifications, and election/budget references.
+- Personal published-budget lists, public or link-only visibility, withdrawal, reporting and moderator tools.
+- Sourced income/corporation tax headlines for all eleven countries, with jurisdiction and period notes.
+- Dated election references that distinguish government budgets, presidential requests, opposition proposals and historical manifestos. Coverage gaps remain explicit.
 - Both return-to-ten controls and versioned frontend assets.
 - Three redundant UK landing callouts removed.
 - Public methodology and data definitions; application CI tests.
@@ -29,7 +34,7 @@ This is a deployed prototype. Deployment of the interface does not mean that the
 | 2 | Credible UK model | Replace prototype sensitivities with sourced, versioned assumptions; record reference periods, units and accounting definitions; document uncertainty, timing and excluded effects. Audit international comparisons and their source records. | Each lever has a reviewable source/assumption record, fiscal cross-checks pass, and every saved result identifies its baseline/model version. |
 | 3 | Complete anonymous experience | Test phone and keyboard journeys; improve slow/failed calculation handling; extend current tab-local drafts where needed; verify completion and copying/sharing. | A first-time visitor can complete all ten decisions on a phone in under five minutes and recover from refresh/network errors. |
 | 4 | AI challenge | Give AI the same baseline, ten controls and constraints; validate its choices and calculate both budgets with the same engine; explain differences. | Human and AI outcomes can be reproduced from their inputs. AI never judges its own answer, and there is no single political winner score. |
-| 5 | Community | Add login only at save/publish/vote/fork; persist versioned proposals; support voting on explanations and forks; add reporting/moderation. | Publishing, attribution, voting, forking and moderation work end to end; there are no reply threads. |
+| Delivered; maintain | Community | Local accounts and recovery codes, immutable publication, voting, attributed forks, country feeds, withdrawal and moderation. Assign trusted moderator accounts through the operator; social sign-in remains optional future work. | Real PostgreSQL tests and mobile/desktop account/publish/vote/fork checks pass. There are no reply threads. |
 | 6 | People's Budget and expansion | Aggregate completed budgets with distributions and participation counts. Expand beyond the eleven playable scenarios; deepen country-specific tax/pension modelling separately. | Aggregates do not award extra weight for popularity. Each new country passes its own data/model and browser checks. |
 
 Priorities describe delivery order, not promised dates. Reliability checks continue throughout.
@@ -46,6 +51,8 @@ CI passed the complete ten-decision journey, results/copy/revisit/reset, Postgre
 
 The dedicated MyCountryBudget runner is active on `sr-operator`. Production release `54b2141` passed deployment, independent backup copy, exact-revision verification and hosted mobile/desktop journeys. The operator backup timer is enabled. Country expansion release `98ad930a` passed the expanded production gate: all eleven countries on mobile and desktop, including ten saves, known fiscal changes, copying, separate drafts, cancellation and reset.
 
+Community release `ef1ae931b778deb48be9ee070b88d0e26e7b2049` implements accounts, immutable publication, voting, attributed forks, country feeds and sourced tax/election references. [CI passed](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35236104512) with 70 model, API, database, security and reference tests. [Production verification passed](https://github.com/tonycgh/MCB-Project-Build/actions/runs/35236717474): exact revision, independent backup copy, all eleven countries on mobile and desktop, and real publishing, voting and forking journeys. Temporary accounts were removed and no public seed activity was created. Rollback was not needed.
+
 Real-host disaster recovery remains a continuing rehearsal task; passing isolated CI recovery tests is not proof of every disaster scenario.
 
 ## Remaining release checks
@@ -53,7 +60,8 @@ Real-host disaster recovery remains a continuing rehearsal task; passing isolate
 - [x] Automated deployment independent of the laptop's forwarded SSH agent.
 - [x] Deployed revision visible in health/release evidence.
 - [x] Repeatable mobile browser check of both return controls, save/revisit, all ten decisions, results and reset.
-- [ ] Backup retention, restore verification and rollback procedure.
+- [x] Backup retention tooling, isolated restore verification and guarded rollback procedure.
+- [ ] Continue real-host disaster-recovery rehearsals and retention audits.
 - [ ] Sourced UK sensitivity model and bias/trade-off review.
 - [ ] Anonymous completion/share experiment.
 
@@ -63,8 +71,11 @@ Real-host disaster recovery remains a continuing rehearsal task; passing isolate
 - Keep observed facts, derived figures and modelled outcomes distinct.
 - Annual deficit/surplus per person is not debt per person.
 - International PPP gross-debt comparisons are not the UK simulator's ONS public-sector baseline.
-- Leave comparison fields blank when definitions cannot yet be normalized.
+- Label missing comparison data explicitly. A missing rate must not imply no tax.
+- Expand verified pension schedules and current government/opposition document coverage; review source dates around elections.
+- References are manually reviewed, not an automatic political-news feed.
 - Keep the prototype label until model-validation requirements are met.
-- AI challenge, account saving, public publishing, votes and forks are future work; their current preview text is not evidence of implementation.
+- The AI challenge remains a labelled preview. Community publishing/voting/forking are implemented; private account-synced editable drafts and social sign-in are not.
+- Keep public community feeds free of synthetic seed votes or test budgets. Release checks use unlisted proposals and remove their temporary accounts.
 
 The private production launch checklist tracks operational evidence. This public roadmap records product direction; update both when a milestone changes.
